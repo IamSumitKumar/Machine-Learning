@@ -1,0 +1,17 @@
+a<-5
+b<-6
+
+    c<-a | b
+    cat("Logical OR",c)
+
+    d<-a & b
+    cat("Logical AND",d)
+
+    e<-a==b
+    cat("Checking for equality",e)
+
+    f<-!a
+    cat("NOT",f)
+
+    g<-xor(a,b)
+    cat("XOR",g)
