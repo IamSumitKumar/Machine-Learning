@@ -1,0 +1,29 @@
+m1<-matrix(c(1,2,3,4,5,6),2,3,byrow=T)
+    
+    m1
+    is.matrix(m1)
+
+    m2<-matrix(c(1,2,1,2,1,2),2,3,byrow=T)
+    m2
+    is.matrix(m2)
+
+    cat("Addition of m1 and m2 matrices")
+
+    m3<-m1+m2
+    m3
+
+    cat("Subtraction of m1 and m2 matrices")
+
+    m4<-m1-m2
+    m4
+
+    m5<-matrix(c(1,2,1,2,1,2),3,2,byrow=T)
+    m5
+
+    cat("Multiplication of m1 and m5 matrices")
+
+    m6<-m1 %*% m5
+    m6
+
+    cat("Display specific row of matrix m1: ",m1[1,])
+    cat("Display specific column of matrix m1: ",m1[,1])
