@@ -1,0 +1,17 @@
+a<-5
+b<-6
+
+    c<-a+b
+    cat("Addition of a and b is",c)
+
+    d<-a-b
+    cat("Subtraction of a and b is",d)
+
+    e<-exp(a)
+    cat("Exponential of a and b is",e)
+
+    f<-a*b
+    cat("Multipilcation of a and b is",f)
+
+    g<-b/a
+    cat("Division of a and b is",g)
