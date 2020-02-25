@@ -1,0 +1,18 @@
+z<-c(10,2,1,3)
+    
+    cat("1D array",z)
+
+    y<-matrix(c(1,2,3,4,5,6),2,3)
+    cat("2D array",y)
+
+    x<-rep(0,5)
+    cat("Specific array of all 0s",x)
+
+    w<-rep(1,6)
+    cat("Specific array of all 1s",w)
+
+    v<-runif(5, min=0, max=100)
+    cat("Array with random values in specific range",v)
+
+    u<-diag(x=1, nrow=3, ncol=3 )
+    u
