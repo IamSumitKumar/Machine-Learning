@@ -1,0 +1,15 @@
+ x=seq(-2*pi,2*pi,.1)
+
+    plot(x,sin(x))
+    plot(x,sin(x),col="blue")
+    plot(x,sin(x),ty="l",col="blue")
+    plot(x,sin(x),ty="l",lwd="3")
+    plot(x,cos(x),ty="l",lwd="3")
+
+    points(x,sin(x),lwd="2")
+
+    lines(x,sin(x),lwd="2")
+
+    hist(x)
+
+    plot(density(x),type="p")
