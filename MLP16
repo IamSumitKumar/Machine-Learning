@@ -1,0 +1,26 @@
+library(MASS)
+    
+    data<-Boston
+    maxs<-apply(data,2,max)
+    mins<-apply(data,2,min)
+    Boston_scaled<-as.data.frame(scale(data,center=mins,scale = maxs-mins))
+    s<-sample(1:nrow(data),size = round(0.70*nrow(Boston_scaled)), replace=FALSE)
+    Boston_train<- Boston_scaled [s,]
+    Boston_test<- Boston_scaled [-s,]
+
+    dim(Boston_test)
+    dim(Boston_train)
+
+    install.packages("neuralnet")
+    library(neuralnet)
+
+    ?neuralnet
+    nn<-neuralnet(medv~crim+zn+indus+chas+nox+rm+age+dis+rad+tax+ptratio+black+lstat,data=Boston_train)
+    names(Boston)
+
+    plot(nn)
+    pr_nn<-compute(nn,Boston_test[,1:13])
+    pr_nn_<-pr_nn$net.result*(max(data$medv)-min(data$medv))+min(data$medv)
+    test_r<-(Boston_test$medv)*(max(data$medv)-min(data$medv))+min(data$medv)
+    MSE_nn<-sum((test_r-pr_nn_)^2)/nrow(Boston_test)
+    plot(Boston_test$medv,pr_nn_)
