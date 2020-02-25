@@ -1,0 +1,25 @@
+ a<-15
+ b<-4
+ c<-23
+
+    if(a<b && aa<c)
+    {
+        cat("a",a,"is the smallest")
+    }
+    else if(ba<a && ba<c)
+    {
+        cat("b",b,"is the smallest")
+    }
+    else
+    {
+        cat("c",c,"is the smallest" )
+    }
+    
+    for(i in 1:5)
+    {
+        for(j in 1:i)
+        {
+            cat("*")
+        }
+        cat("\n")
+    }
