@@ -1,0 +1,23 @@
+m<-matrix(c(-1,2,-3,1,-2,3),3,2,byrow=T)
+
+    m1<-abs(m)
+    cat("Absolute values in a matrix")
+    m1
+
+    m2<--1*m
+    cat("Taking negative of elements in a matrix")
+    m2
+
+    m3<-m[-c(2,3),]
+    cat("Removing specific rows")
+    m3
+
+    m4<-m[,-c(2)]
+    cat("Removing specific columns")
+    m4
+
+    m5<-sum(m)
+    cat("Sum of all th elements of a matrix",m5)
+
+    cat("Maximum element of a matrix",max(m))
+    cat("Minimum element of a matrix",min(m))
