@@ -1,0 +1,9 @@
+ x=seq(-2*pi,2*pi,.1)
+
+    par(mfrow=c(2,2))
+
+    plot(x,sin(x),col="red")
+    plot(x,cos(x),ty="l",lwd="3")
+    plot(x,tan(x),ty="l",xlab="This is x-value",ylab="This is y-value")
+
+    hist(cos(x))
